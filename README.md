@@ -1,6 +1,6 @@
 # Azure VM Management MCP
 
-A Python-based tool for managing Azure Virtual Machines using the Machine Control Protocol (MCP). This project provides a simple interface to create, list, and delete Azure VMs along with their associated network resources.
+A Python-based demo tool for managing Azure VMs using the MCP (Model-Context Protocol). This project provides a simple interface to create, list, and delete Azure VMs along with their associated network resources.
 
 ## Prerequisites
 
@@ -61,6 +61,32 @@ Run the MCP server:
 ```sh
 uv run .\src\main.py
 ```
+
+## MCP Client Configuration (For Claude)
+### Claude
+1. Navigate to Claude Configuration file (`C:\Users\<user>\AppData\Roaming\Claude for Windows`)
+2. Add the following text to the claude_desktop_config.json file. **Make sure to use the full path on your local machine. Eg. 'C:\\code\\azure-mcp\\src**'
+```sh
+{
+  "mcpServers": {
+    "Azure VM": {
+      "command": "uv",
+      "args": [
+        "--directory",
+        "<FULL_PATH\\>azure-mcp\\src\\",
+        "run",
+        "main.py"
+      ]
+    }
+  }
+}
+```
+3. Validate that Claude is now connected to the MCP Server. Open Claude App and Navigate to File -> Settings. The "Azure MCP" Server should show as Running in the Developer tab
+
+!(./img/claude1.png)
+
+!(./img/claude2.png)
+
 
 ## Project Structure
 

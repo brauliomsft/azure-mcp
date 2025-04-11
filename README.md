@@ -83,9 +83,9 @@ uv run .\src\main.py
 ```
 3. Validate that Claude is now connected to the MCP Server. Open Claude App and Navigate to File -> Settings. The "Azure MCP" Server should show as Running in the Developer tab
 
-!(./img/claude1.png)
+![](./img/claude1.png)
 
-!(./img/claude2.png)
+![](./img/claude2.png)
 
 
 ## Project Structure

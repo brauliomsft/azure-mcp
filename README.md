@@ -1,6 +1,6 @@
 # Azure VM Management MCP
 
-A Python-based demo tool for managing Azure VMs using the MCP (Model-Context Protocol). This project provides a simple interface to create, list, and delete Azure VMs along with their associated network resources.
+A Python-based demo tool for managing Azure VMs using the MCP (Model-Context Protocol). This project provides a simple interface to create, list, and delete Azure VMs along with their associated network resources using an LLM Client such as Claude or Visual Studio Code using natural language.
 
 ## Prerequisites
 

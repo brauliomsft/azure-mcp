@@ -12,17 +12,22 @@ A Python-based tool for managing Azure Virtual Machines using the Machine Contro
 
 1. Clone this repository:
 ```sh
-git clone <repository-url>
+git clone https://github.com/brauliomsft/azure-mcp
 cd azure-mcp
 ```
 
-2. Create and activate a virtual environment:
+2. Install uv and set up the Python project and environment
 ```sh
-python -m venv .venv
-source .venv/bin/activate  # On Windows: .venv\Scripts\activate
+powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
 ```
 
-3. Install dependencies:
+3. Create and activate a virtual environment:
+```sh
+uv venv
+.venv\Scripts\activate
+```
+
+4. Install dependencies:
 ```sh
 pip install -r src/requirements.txt
 ```
@@ -54,7 +59,7 @@ The project provides the following MCP tools:
 Run the MCP server:
 
 ```sh
-python src/main.py
+uv run .\src\main.py
 ```
 
 ## Project Structure
@@ -73,6 +78,3 @@ python src/main.py
 
 ⚠️ The default VM configuration uses a hardcoded password. For production use, modify the `create_vm` function in `vm_operations.py` to use more secure authentication methods.
 
-## License
-
-[Your License Here]

@@ -7,6 +7,7 @@ A Python-based demo tool for managing Azure VMs using the MCP (Model-Context Pro
 - Python 3.13 or higher
 - Azure subscription
 - Azure CLI (for authentication)
+- An LLM/MCP Client. Can use [Claude](https://claude.ai/download)  or [Visual Studio Code](https://code.visualstudio.com/docs/copilot/chat/mcp-servers)
 
 ## Installation
 
@@ -104,3 +105,6 @@ uv run .\src\main.py
 
 ⚠️ The default VM configuration uses a hardcoded password. For production use, modify the `create_vm` function in `vm_operations.py` to use more secure authentication methods.
 
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
